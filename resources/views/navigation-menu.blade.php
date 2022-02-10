@@ -97,7 +97,7 @@
                                 Admin İşlemleri
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('quizzes.create') }}">
+                            <x-jet-dropdown-link href="{{ route('quizzes.index') }}">
                                 Quizler
                             </x-jet-dropdown-link>
                             @endif
