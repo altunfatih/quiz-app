@@ -3,6 +3,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">
+                <a href="{{route('quizzes.index')}}" class="btn btn-sm btn-secondary"><i class="fa fa-arrow-left"></i> Quizlere Dön</a>
                 <a href="{{route('questions.create', $quiz->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Create Question</a>
             </h5>
             <table class="table table-bordered">
