@@ -34,7 +34,7 @@
                       <td class="text-success">{{ substr($question->correct_answer, -1) }}</td>
                       <td>
                           <a href="{{ route('questions.edit', [$quiz->id, $question->id]) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                          <a href="{{ route('quizzes.destroy', $quiz->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+                          <a href="{{ route('questions.destroy', [$quiz->id, $question->id]) }}" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
                       </td>
                   </tr>
                 @endforeach
