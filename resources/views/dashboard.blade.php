@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">Anasayfa</x-slot>
-    <div class="rof">
+    <div class="row">
         <div class="col-md-8">
             <div class="list-group">
                 @foreach ($quizzes as $quiz)
@@ -17,7 +17,23 @@
                 </div>
               </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                  <strong>Quiz Sonuçları</strong>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($results as $result)
+                    <li class="list-group-item">
+                    <a href="{{ route('quiz.detail', $result->quiz->slug) }}">
+                        {{ $result->quiz->title }}
+                    </a>
+                        <strong> - {{ $result->point }}</strong>
+                    </li>
+                    @endforeach
+                </ul>
+              </div>
+        </div>
     </div>
-    <div class="col-md-4">
-    </div>
+
 </x-app-layout>
